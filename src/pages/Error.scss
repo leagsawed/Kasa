@@ -1,0 +1,40 @@
+@import '../scss/Variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  .png {
+    width: 600px;
+    margin-block: 50px;
+  }
+  p {
+    color: $red;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+  .home {
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-decoration: underline;
+    color: $black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 2rem;
+    .png {
+      width: 200px;
+    }
+    p {
+      font-size: 15px;
+      text-align: center;
+    }
+    .home {
+      font-size: 10px;
+    }
+  }
+}

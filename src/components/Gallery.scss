@@ -1,0 +1,20 @@
+@import '../scss/Variables.scss';
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  border-radius: 1rem;
+  background-color: $grey;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+}
+
+@media screen and (width <=768px) {
+  .gallery {
+    justify-content: center;
+    background-color: $white;
+    padding: 0;
+  }
+}

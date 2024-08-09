@@ -1,0 +1,19 @@
+.carousel-banner {
+  img {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-banner {
+    img {
+      height: 200px;
+      object-fit: overflow;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

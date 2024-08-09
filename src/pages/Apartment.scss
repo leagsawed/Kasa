@@ -1,0 +1,16 @@
+@import '../scss/Variables.scss';
+
+.apartment-page {
+  color: $red;
+}
+.apartment-details {
+  display: flex;
+  gap: 3em;
+}
+
+@media screen and (max-width: 768px) {
+  .apartment-details {
+    flex-direction: column;
+    gap: 1em;
+  }
+}

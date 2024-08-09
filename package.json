@@ -4,14 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "sass": "^1.77.8",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

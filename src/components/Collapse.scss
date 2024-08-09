@@ -1,0 +1,40 @@
+@import '../scss/Variables.scss';
+
+.apartment-description {
+  .description-title {
+    display: flex;
+    align-items: center;
+    background-color: $red;
+    color: $white;
+    border-radius: 0.5em;
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.7em 1em;
+    .fa-solid {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  .description-content {
+    background-color: $grey;
+    padding: 1em;
+    margin: 0;
+    border-radius: 0.5em;
+    font-size: 20px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .apartment-description {
+    .description-title {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .description-content {
+      padding: 1em 1.5em;
+      font-size: 12px;
+    }
+  }
+}

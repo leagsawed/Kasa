@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 90vw;
+  margin: auto;
+  padding: 2rem 0;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 3rem;
+  & a {
+    color: #000000;
+    text-decoration: none;
+  }
+  & a:hover {
+    text-decoration: underline;
+    transition-duration: 0.2s;
+  }
+  &_logo {
+    margin-right: auto;
+    & img {
+      width: 230px;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+
+@media screen and (width <=768px) {
+  .navbar {
+    font-size: 10px;
+    gap: 1.2rem;
+    text-transform: uppercase;
+    &_logo img {
+      width: 124px;
+    }
+  }
+}
