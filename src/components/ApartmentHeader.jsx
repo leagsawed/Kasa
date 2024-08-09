@@ -1,10 +1,8 @@
 import './ApartmentHeader.scss';
 
-function ApartmentHeader(props) {
-  console.log(props);
-
-  const apartment = props.apartment;
+function ApartmentHeader({ apartment }) {
   const [firstName, lastName] = apartment.host.name.split(' ');
+  const stars = [...Array(5).keys()];
 
   return (
     <div className="apartment-header">
@@ -12,8 +10,8 @@ function ApartmentHeader(props) {
         <h1>{apartment.title}</h1>
         <h2>{apartment.location}</h2>
         <div className="apartment-tags">
-          {apartment.tags.map((tag) => (
-            <span>{tag}</span>
+          {apartment.tags.map((tag, index) => (
+            <span key={index}>{tag}</span>
           ))}
         </div>
       </div>
@@ -28,10 +26,11 @@ function ApartmentHeader(props) {
           </div>
         </div>
         <div className="host-stars">
-          {[1, 2, 3, 4, 5].map((array) => (
+          {stars.map((num) => (
             <i
+              key={num}
               className={
-                apartment.rating > array
+                apartment.rating > num
                   ? 'fa-solid fa-star on'
                   : 'fa-solid fa-star'
               }

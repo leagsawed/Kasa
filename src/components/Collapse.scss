@@ -1,7 +1,8 @@
 @import '../scss/Variables.scss';
 
-.apartment-description {
-  .description-title {
+.collapse-panel {
+  flex-basis: 50%;
+  .collapse-title {
     display: flex;
     align-items: center;
     background-color: $red;
@@ -16,7 +17,7 @@
       cursor: pointer;
     }
   }
-  .description-content {
+  .collapse-content {
     background-color: $grey;
     padding: 1em;
     margin: 0;
@@ -27,12 +28,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .apartment-description {
-    .description-title {
+  .collapse {
+    .collapse-title {
       font-size: 12px;
       font-weight: 600;
     }
-    .description-content {
+    .collapse-content {
       padding: 1em 1.5em;
       font-size: 12px;
     }

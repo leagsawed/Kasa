@@ -1,20 +1,14 @@
 import './Collapse.scss';
 
-function Collapse() {
+function Collapse(props) {
+  console.log(props);
   return (
-    <div className="apartment-description">
-      <div className="description-title">
-        <span>Description</span>
+    <div className="collapse-panel">
+      <div className="collapse-title">
+        <span>{props.title}</span>
         <i className="fa-solid fa-chevron-up"></i>
       </div>
-      <p className="description-content">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, est
-        pariatur minima quaerat, sapiente repudiandae ducimus omnis totam ex, ab
-        consectetur delectus incidunt asperiores modi! Numquam excepturi minus,
-        reprehenderit tempora laboriosam sed placeat blanditiis quibusdam modi,
-        sapiente magni harum alias id quos quas, assumenda nisi saepe odit fuga
-        consequuntur eaque!
-      </p>
+      <p className="collapse-content">{props.content}</p>
     </div>
   );
 }

@@ -28,8 +28,13 @@ function Apartment() {
       <CarouselBanner imageUrl={apartment.cover} />
       <ApartmentHeader apartment={apartment} />
       <div className="apartment-details">
-        <Collapse />
-        <Collapse />
+        <Collapse title="Description" content={apartment.description} />
+        <Collapse
+          title="Équipements"
+          content={apartment.equipments.map((eq) => (
+            <li>{eq}</li>
+          ))}
+        />
       </div>
     </div>
   );

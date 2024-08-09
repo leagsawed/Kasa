@@ -7,10 +7,10 @@ function About() {
     <div>
       <Banner />
       <div className="about-details">
-        <Collapse />
-        <Collapse />
-        <Collapse />
-        <Collapse />
+        <Collapse title="Fiabilité" />
+        <Collapse title="Respect" />
+        <Collapse title="Service" />
+        <Collapse title="Sécurité" />
       </div>
     </div>
   );
