@@ -4,23 +4,15 @@ import CarouselBanner from '../components/CarouselBanner.jsx';
 import ApartmentHeader from '../components/ApartmentHeader.jsx';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { fetchData } from '../api.jsx';
 
 function Apartment() {
   const location = useLocation();
   const [apartment, setApartment] = useState(null);
-  useEffect(fetchApartmentData, []);
+  useEffect(() => {
+    fetchData(location, setApartment);
+  }, [location]);
 
-  function fetchApartmentData() {
-    fetch('data.json')
-      .then((res) => res.json())
-      .then((apartments) => {
-        const apartment = apartments.find(
-          (apartment) => apartment.id === location.state.apartmentId
-        );
-        setApartment(apartment);
-      })
-      .catch(console.error);
-  }
   if (apartment == null) return <div> Loading...</div>;
   console.log(apartment);
   return (

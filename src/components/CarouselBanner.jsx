@@ -13,7 +13,6 @@ function CarouselBanner(props) {
 
   const nextPicture = () => {
     setCurrentPicture((currentPicture + 1) % pictures.length);
-    console.log(currentPicture);
   };
 
   const previousPicture = () => {
@@ -23,17 +22,20 @@ function CarouselBanner(props) {
       return;
     }
     setCurrentPicture(currentPicture - 1);
-    console.log(currentPicture);
   };
 
   return (
     <div className="carousel-banner">
-      <button onClick={previousPicture} className="btn-previous">
-        <i className="fa-solid fa-chevron-left"></i>
-      </button>
-      <button onClick={nextPicture} className="btn-next">
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
+      {pictures.length > 1 && (
+        <>
+          <button onClick={previousPicture} className="btn-previous">
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <button onClick={nextPicture} className="btn-next">
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </>
+      )}
       {pictures.map((pic, i) => (
         <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
       ))}

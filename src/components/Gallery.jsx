@@ -1,18 +1,16 @@
 import './Gallery.scss';
 import Card from '../components/Card.jsx';
 import { useState, useEffect } from 'react';
+import { fetchData } from '../api.jsx';
+import { useLocation } from 'react-router-dom';
 
 function Gallery() {
-  const [apartments, setApartements] = useState([]);
+  const location = useLocation();
+  const [apartments, setApartments] = useState([]);
 
-  useEffect(fetchApartments, []);
-
-  function fetchApartments() {
-    fetch('data.json')
-      .then((res) => res.json())
-      .then((res) => setApartements(res))
-      .catch(console.error);
-  }
+  useEffect(() => {
+    fetchData(location, setApartments);
+  }, [location]);
 
   return (
     <div className="gallery">
