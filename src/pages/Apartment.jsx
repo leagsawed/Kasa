@@ -1,5 +1,5 @@
 import './Apartment.scss';
-import Collapse from '../components/Collapse.jsx';
+import CollapsePanel from '../components/CollapsePanel.jsx';
 import CarouselBanner from '../components/CarouselBanner.jsx';
 import ApartmentHeader from '../components/ApartmentHeader.jsx';
 import { useLocation } from 'react-router-dom';
@@ -22,17 +22,17 @@ function Apartment() {
       .catch(console.error);
   }
   if (apartment == null) return <div> Loading...</div>;
-
+  console.log(apartment);
   return (
     <div className="apartment-page">
-      <CarouselBanner imageUrl={apartment.cover} />
+      <CarouselBanner pictures={apartment.pictures} />
       <ApartmentHeader apartment={apartment} />
       <div className="apartment-details">
-        <Collapse title="Description" content={apartment.description} />
-        <Collapse
+        <CollapsePanel title="Description" content={apartment.description} />
+        <CollapsePanel
           title="Équipements"
-          content={apartment.equipments.map((eq) => (
-            <li>{eq}</li>
+          content={apartment.equipments.map((eq, index) => (
+            <li key={index}>{eq}</li>
           ))}
         />
       </div>

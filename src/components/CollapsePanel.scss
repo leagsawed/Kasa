@@ -1,8 +1,12 @@
 @import '../scss/Variables.scss';
 
 .collapse-panel {
+  display: flex;
+  flex-direction: column;
   flex-basis: 50%;
+  overflow: hidden;
   .collapse-title {
+    z-index: 1;
     display: flex;
     align-items: center;
     background-color: $red;
@@ -12,23 +16,41 @@
     font-size: 20px;
     font-weight: 500;
     padding: 0.7em 1em;
+    cursor: pointer;
     .fa-solid {
       margin-left: auto;
-      cursor: pointer;
+      transition: transform 0.3s ease-out;
+    }
+    .visible {
+      transform: rotate(-180deg);
+    }
+    .hidden {
+      transform: rotate(0);
     }
   }
   .collapse-content {
     background-color: $grey;
+    height: 100%;
     padding: 1em;
     margin: 0;
     border-radius: 0.5em;
     font-size: 20px;
     color: black;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    &.hidden {
+      max-height: 0;
+      padding: 0;
+    }
+    &.visible {
+      max-height: 100%;
+      padding: 1em;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .collapse {
+  .collapse-panel {
     .collapse-title {
       font-size: 12px;
       font-weight: 600;

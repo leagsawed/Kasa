@@ -4,7 +4,7 @@ import Gallery from '../components/Gallery.jsx';
 function HomePage() {
   return (
     <>
-      <Banner />
+      <Banner title="Chez vous, partout et ailleurs" image="Banner1.png" />
       <Gallery />
     </>
   );

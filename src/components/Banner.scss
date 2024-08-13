@@ -6,29 +6,33 @@
   align-items: center;
   position: relative;
   width: 100%;
-  background-image: url('Banner.png');
-  background-size: cover;
-  background-position: center;
-  min-height: 200px;
   border-radius: 1rem;
-  color: $white;
-  stroke: black;
-  text-shadow: 0px 0px 4px black;
-  font-size: 50px;
-  font-weight: 600;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
   margin-bottom: 2rem;
   box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.219);
+  img {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+  }
   &::before {
+    z-index: 1;
     position: absolute;
     content: '';
     inset: 0;
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
   }
   & h1 {
     z-index: 2;
+    position: absolute;
+    color: $white;
     font-size: 50px;
+    font-weight: 600;
+    stroke: black;
+    text-shadow: 0px 0px 4px black;
   }
 }
 

@@ -10,7 +10,7 @@ function Error() {
       <Navbar />
       <MainContainer>
         <div className="container">
-          <img src="404.png" className="png" />
+          <img src="../../public/404.png" className="png" />
           <p>Oups! La page que vous demandez n'existe pas.</p>
           <Link to="/" className="home">
             Retourner sur la page d'accueil
