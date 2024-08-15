@@ -1,22 +1,15 @@
 import './Gallery.scss';
 import Card from '../components/Card.jsx';
-import { useState, useEffect } from 'react';
-import { fetchData } from '../api.jsx';
-import { useLocation } from 'react-router-dom';
+import { useApartments } from '../hooks/useApartments';
 
 function Gallery() {
-  const location = useLocation();
-  const [apartments, setApartments] = useState([]);
-
-  useEffect(() => {
-    fetchData(location, setApartments);
-  }, [location]);
+  const apartments = useApartments();
 
   return (
     <div className="gallery">
-      {apartments.slice(0, 6).map((apartment, index) => (
+      {apartments.slice(0, 6).map((apartment) => (
         <Card
-          key={index}
+          key={apartment.id}
           title={apartment.title}
           imageUrl={apartment.cover}
           id={apartment.id}

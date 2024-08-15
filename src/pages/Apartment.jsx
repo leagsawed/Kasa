@@ -2,19 +2,12 @@ import './Apartment.scss';
 import CollapsePanel from '../components/CollapsePanel.jsx';
 import CarouselBanner from '../components/CarouselBanner.jsx';
 import ApartmentHeader from '../components/ApartmentHeader.jsx';
-import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { fetchData } from '../api.jsx';
+import { useApartments } from '../hooks/useApartments';
 
 function Apartment() {
-  const location = useLocation();
-  const [apartment, setApartment] = useState(null);
-  useEffect(() => {
-    fetchData(location, setApartment);
-  }, [location]);
+  const apartment = useApartments();
 
   if (apartment == null) return <div> Loading...</div>;
-  console.log(apartment);
   return (
     <div className="apartment-page">
       <CarouselBanner pictures={apartment.pictures} />

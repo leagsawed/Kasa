@@ -3,6 +3,9 @@ import { useState } from 'react';
 
 function CarouselBanner(props) {
   const pictures = props.pictures;
+  {
+    console.log(pictures);
+  }
 
   const [currentPicture, setCurrentPicture] = useState(0);
 
@@ -34,10 +37,13 @@ function CarouselBanner(props) {
           <button onClick={nextPicture} className="btn-next">
             <i className="fa-solid fa-chevron-right"></i>
           </button>
+          <div className="counter">
+            {currentPicture + 1}/{pictures.length}
+          </div>
         </>
       )}
       {pictures.map((pic, i) => (
-        <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
+        <img key={pic} src={pic} alt="" className={getClassName(i)} />
       ))}
     </div>
   );
