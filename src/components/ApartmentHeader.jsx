@@ -3,7 +3,6 @@ import './ApartmentHeader.scss';
 function ApartmentHeader({ apartment }) {
   const [firstName, lastName] = apartment.host.name.split(' ');
   const stars = [...Array(5).keys()];
-
   return (
     <div className="apartment-header">
       <div className="apartment-title">

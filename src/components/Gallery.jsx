@@ -7,7 +7,7 @@ function Gallery() {
 
   return (
     <div className="gallery">
-      {apartments.slice(0, 6).map((apartment) => (
+      {apartments.map((apartment) => (
         <Card
           key={apartment.id}
           title={apartment.title}

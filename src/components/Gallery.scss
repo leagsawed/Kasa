@@ -1,14 +1,12 @@
 @import '../scss/Variables.scss';
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 90vh;
-  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem;
   background-color: $grey;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  justify-content: space-between;
+  border-radius: 1rem;
 }
 
 @media screen and (width <=768px) {

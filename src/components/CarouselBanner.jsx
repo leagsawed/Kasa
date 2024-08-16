@@ -3,9 +3,6 @@ import { useState } from 'react';
 
 function CarouselBanner(props) {
   const pictures = props.pictures;
-  {
-    console.log(pictures);
-  }
 
   const [currentPicture, setCurrentPicture] = useState(0);
 
