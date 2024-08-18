@@ -2,7 +2,7 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2.5rem;
   padding: 2.5rem;
   background-color: $grey;
@@ -11,6 +11,8 @@
 
 @media screen and (width <=768px) {
   .gallery {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: $white;
     padding: 0;

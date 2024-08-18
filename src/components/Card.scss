@@ -31,7 +31,7 @@
 @media screen and (width <=768px) {
   .card {
     flex-basis: 100%;
-    aspect-ratio: none;
+    aspect-ratio: auto;
     height: 250px;
   }
 }
