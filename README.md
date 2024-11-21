@@ -1,8 +1,32 @@
-# React + Vite
+# Kasa - Application de Location Immobilière
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Kasa est une application web de location immobilière développée avec React et Vite. Elle permet aux utilisateurs de parcourir des annonces de locations, voir les détails des logements et accéder aux informations sur la plateforme.
 
-Currently, two official plugins are available:
+## Technologies Utilisées
+- React 18
+- Vite
+- React Router DOM
+- SASS
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prérequis
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+
+## Installation
+
+1. Cloner le repository
+
+git clone [url-du-repo]
+
+
+2. Installer les dépendances
+   
+npm install
+
+3. Lancer l'application en mode développement
+
+npm run dev
+
+L'application sera accessible à l'adresse `http://localhost:5173`
