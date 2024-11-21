@@ -8,7 +8,6 @@ Kasa est une application web de location immobilière développée avec React et
 - Vite
 - React Router DOM
 - SASS
-- Tailwind CSS
 
 ## Prérequis
 - Node.js (version 18 ou supérieure)
@@ -18,7 +17,7 @@ Kasa est une application web de location immobilière développée avec React et
 
 1. Cloner le repository
 
-git clone [url-du-repo]
+git clone git@github.com:leagsawed/Kasa.git
 
 
 2. Installer les dépendances
